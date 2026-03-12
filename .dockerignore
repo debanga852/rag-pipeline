@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Runtime data (use Docker volumes instead)
+chroma_db/
+uploads/
+
+# Secrets
+.env
+
+# Dev tools
+.git/
+.claude/
+*.md
