@@ -58,7 +58,7 @@ app.include_router(query.router)
 async def health_check():
     return HealthResponse(
         status="healthy",
-        model=settings.claude_model,
+        model=settings.groq_model,
         embedding_model=settings.embedding_model,
         vector_store="ChromaDB",
     )

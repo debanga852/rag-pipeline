@@ -2,7 +2,7 @@ import asyncio
 import logging
 from typing import AsyncIterator
 
-from langchain_anthropic import ChatAnthropic
+from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage
 
 from backend.config import settings
@@ -28,10 +28,10 @@ Question: {question}
 Please provide a comprehensive answer based on the context above."""
 
 
-def _get_llm() -> ChatAnthropic:
-    return ChatAnthropic(
-        model=settings.claude_model,
-        api_key=settings.anthropic_api_key,
+def _get_llm() -> ChatGroq:
+    return ChatGroq(
+        model=settings.groq_model,
+        api_key=settings.groq_api_key,
         max_tokens=2048,
     )
 
@@ -75,7 +75,7 @@ async def _retrieve(query: str, k: int):
 
 
 async def query_rag(query: str, num_results: int = 4) -> dict:
-    """Retrieve relevant chunks and generate an answer with Claude."""
+    """Retrieve relevant chunks and generate an answer with Groq."""
     docs = await _retrieve(query, num_results)
 
     if not docs:

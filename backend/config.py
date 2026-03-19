@@ -2,8 +2,8 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    anthropic_api_key: str
-    claude_model: str = "claude-sonnet-4-6"
+    groq_api_key: str
+    groq_model: str = "llama-3.3-70b-versatile"
     embedding_model: str = "all-MiniLM-L6-v2"
     chroma_persist_dir: str = "./chroma_db"
     chroma_collection_name: str = "rag_documents"
