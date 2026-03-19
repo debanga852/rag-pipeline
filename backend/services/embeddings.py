@@ -1,6 +1,6 @@
 import logging
 from langchain_huggingface import HuggingFaceEmbeddings
-from backend.config import settings
+from ..config import settings
 
 logger = logging.getLogger(__name__)
 

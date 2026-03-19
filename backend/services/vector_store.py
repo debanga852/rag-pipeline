@@ -1,7 +1,7 @@
 import logging
 from langchain_chroma import Chroma
-from backend.config import settings
-from backend.services.embeddings import get_embedding_model
+from ..config import settings
+from .embeddings import get_embedding_model
 
 logger = logging.getLogger(__name__)
 

@@ -9,8 +9,8 @@ from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from backend.config import settings
-from backend.services.vector_store import get_vector_store
+from ..config import settings
+from .vector_store import get_vector_store
 
 logger = logging.getLogger(__name__)
 

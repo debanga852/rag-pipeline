@@ -3,8 +3,8 @@ import logging
 from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import StreamingResponse
 
-from backend.models import QueryRequest, QueryResponse
-from backend.services.rag_chain import query_rag, stream_rag
+from ..models import QueryRequest, QueryResponse
+from ..services.rag_chain import query_rag, stream_rag
 
 router = APIRouter(prefix="/api", tags=["query"])
 logger = logging.getLogger(__name__)

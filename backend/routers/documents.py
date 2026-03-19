@@ -3,10 +3,10 @@ from pathlib import Path
 
 from fastapi import APIRouter, File, HTTPException, UploadFile, status
 
-from backend.config import settings
-from backend.models import DeleteResponse, DocumentListResponse, DocumentResponse
-from backend.services.document_processor import process_document
-from backend.services.vector_store import (
+from ..config import settings
+from ..models import DeleteResponse, DocumentListResponse, DocumentResponse
+from ..services.document_processor import process_document
+from ..services.vector_store import (
     delete_document_chunks,
     document_exists,
     get_all_documents,

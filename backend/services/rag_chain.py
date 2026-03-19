@@ -5,9 +5,9 @@ from typing import AsyncIterator
 from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage
 
-from backend.config import settings
-from backend.models import Source
-from backend.services.vector_store import get_vector_store
+from ..config import settings
+from ..models import Source
+from .vector_store import get_vector_store
 
 logger = logging.getLogger(__name__)
 

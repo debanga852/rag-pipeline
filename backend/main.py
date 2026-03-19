@@ -5,11 +5,11 @@ from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.config import settings
-from backend.models import HealthResponse
-from backend.routers import documents, query
-from backend.services.embeddings import get_embedding_model
-from backend.services.vector_store import get_vector_store
+from .config import settings
+from .models import HealthResponse
+from .routers import documents, query
+from .services.embeddings import get_embedding_model
+from .services.vector_store import get_vector_store
 
 logging.basicConfig(
     level=logging.INFO,
